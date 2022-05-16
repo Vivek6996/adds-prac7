@@ -20,7 +20,7 @@ int main(){
     }
 
     
-    BubbleSort bSorter = BubbleSort();
+    // BubbleSort bSorter = BubbleSort();
     QuickSort qSorter = QuickSort();
     RecursiveBinarySearch search1 = RecursiveBinarySearch();
 
