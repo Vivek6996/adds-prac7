@@ -22,9 +22,9 @@ int main(){
     
     // BubbleSort bSorter = BubbleSort();
     QuickSort qSorter = QuickSort();
-    RecursiveBinarySearch search1 = RecursiveBinarySearch();
-
     std::vector<int> sorted = qSorter.sort(iList);
+
+    RecursiveBinarySearch search1 = RecursiveBinarySearch();
     bool response = search1.search(sorted, 1);
 
 
@@ -45,6 +45,5 @@ int main(){
     }
 
     return 0;
-
 
 }
