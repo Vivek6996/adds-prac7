@@ -7,7 +7,6 @@
 class Sort {
 
     public:
-    Sort();
     virtual std::vector<int> sort(std::vector<int> list) = 0;
     int len;
 
@@ -17,3 +16,4 @@ class Sort {
 };
 
 #endif
+

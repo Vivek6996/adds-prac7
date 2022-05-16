@@ -1,10 +1,11 @@
 #include "BubbleSort.h"
+#include <bits/stdc++.h>
 
 BubbleSort::BubbleSort(){
     len = 0;
 }
 
-std::vector<int> BubbleSort::sort(std::vector<int> list){
+std::vector<int> BubbleSort::sort(std::vector<int> list) {
 
     unsorted = list;
 
@@ -26,7 +27,6 @@ std::vector<int> BubbleSort::sort(std::vector<int> list){
 
 
         return unsorted;
-
 
 }
 

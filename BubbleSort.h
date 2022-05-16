@@ -6,6 +6,7 @@
 class BubbleSort : public Sort {
 
     public:
+        BubbleSort();
         virtual std::vector<int> sort(std::vector<int> list);
 
 
