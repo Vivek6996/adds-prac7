@@ -1,49 +1,51 @@
+#include "Sort.h"
 #include "BubbleSort.h"
 #include "QuickSort.h"
 #include "RecursiveBinarySearch.h"
 
+#include <iostream>
 #include <string>
-#include <vector>
 #include <sstream>
+#include <vector>
+#include <cstdlib>
 
-int main(){
+using namespace std;
 
-    std::string in;
-    std::getline (std::cin, in);
-    std::stringstream stream(in);
-    std::vector<int> iList;
+int main()
+{
+   vector<int> in;
+   string s;
+   getline(cin, s);
 
-    int n;
-
-    while (stream >> n) {
-        iList.push_back(n);
-    }
-
-    
-    // BubbleSort bSorter = BubbleSort();
-    QuickSort qSorter = QuickSort();
-    std::vector<int> sorted = qSorter.sort(iList);
-
-    RecursiveBinarySearch search1 = RecursiveBinarySearch();
-    bool response = search1.search(sorted, 1);
+   istringstream is(s);
+   int v;
 
 
-    if (response == true) {
-        std::cout << "true ";
-    }
-    else  {
-        std::cout << "false ";
-    }
+   while (is >> v)
+   {
+       in.push_back(v);
+   }
 
-    for (int i = 0; i < sorted.size(); i++) {
-        if (i < sorted.size() - 1)  {
-            std::cout << sorted.at(i) << " ";
-        }
-        else  {
-            std::cout << sorted.at(i) << std::endl;
-        }
-    }
 
-    return 0;
+   QuickSort q;
+   q.sort(in);
 
+   RecursiveBinarySearch search1;
+   int response = search1.search(in, 1);
+
+   if (response >= 0)
+   {
+       cout << "true ";
+   }
+   else
+   {
+       cout << "false ";
+   }
+
+   for(unsigned int i = 0; i < in.size(); i++)
+   {
+       cout << " " << in.at(i);
+   }
+
+   return 0;
 }
